@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+ /* You can override the default Infima variables here. */
+ :root {
+   --ifm-color-primary: #5f59f7;
+   --ifm-color-primary-dark: #4039f5;
+   --ifm-color-primary-darker: #3129f5;
+   --ifm-color-primary-darkest: #130be0;
+   --ifm-color-primary-light: #7e79f9;
+   --ifm-color-primary-lighter: #8d89f9;
+   --ifm-color-primary-lightest: #bcb9fc;
+   --ifm-code-font-size: 95%;
+   --ifm-heading-color: #3A3A3C;
+   --ifm-menu-color: #3A3A3C;
+   --ifm-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+   'Segoe UI', Helvetica, Arial, sans-serif;
+   --doc-sidebar-width: 350px !important;
+ }
+ 
+ html[data-theme='dark'] {
+   /* any other colors you wish to overwrite */
+   --ifm-menu-color: rgb(214, 215, 221);
+   --ifm-heading-color: rgb(214, 215, 221);
+ }
+ 
+ .menu {
+   margin: 5px;
+ }
+ 
+
+
+ .menu__list-item-collapsible > .menu__link {
+   font-size: 1em;
+   font-weight: 400;
+ }
+
+
+ .theme-doc-sidebar-menu {
+   padding: 0 0 0 15px;
+ }
+ 
+ /* .theme-doc-sidebar-item-category-level-1 > .menu__link {
+   font-weight: 600;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   text-transform: uppercase;
+   color: #93939b;
+ 
+ }
+ 
+ .theme-doc-sidebar-item-category-level-1 > .menu__list {
+   margin-bottom: 1em;
+   margin-top: 0.5em;
+   margin-left: 0;
+ } */
+
+ .theme-doc-sidebar-item-link-level-2 .menu__link, .theme-doc-sidebar-item-category-level-2 .menu__link {
+   font-weight: 400;
+   font-size: 0.9rem;
+ }
+ 
+ .theme-doc-sidebar-item-link-level-2 .menu__link--active, .theme-doc-sidebar-item-category-level-2 .menu__link--active {
+   color: var(--ifm-color-primary);
+   background-color: transparent;
+ }
+ 
+ .theme-doc-sidebar-item-category-level-2 > .menu__list {
+   margin-left: 1em;
+ }
+ 
+ .navbar__search {
+   margin-left: 0.5em;
+ }
+ 
+ .navbar__title {
+   margin-left: 0.5em;
+ }
+ 
+ .docusaurus-highlight-code-line {
+   background-color: rgba(0, 0, 0, 0.1);
+   display: block;
+   margin: 0 calc(-1 * var(--ifm-pre-padding));
+   padding: 0 var(--ifm-pre-padding);
+ }
+ 
+ html[data-theme='dark'] .docusaurus-highlight-code-line {
+   background-color: rgba(0, 0, 0, 0.3);
+ }
+ 
+ h1 { font-size: xxx-large; }
+ h2 { font-size: x-large; }
+ h3 { font-size: large; }
+ 
+ /* p {
+  font-size: 18px;
+ } */
+
+ /* Custom utilities used where tailwind doesnt compile (i.e inside sidebar.js) */
+ /* .sidebar-title {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.2;
+} */
+
+.utils-mb-10 {
+  margin-bottom: 10px;
+}
+
+.utils-font-sm {
+  font-size: 0.9em;
+}
+
+.utils-lineHeight-normal {
+  line-height: 1.15;
+}
+
+.utils-fontWeight-600 {
+  font-weight: 600
+}
+
+.utils-mt-8 {
+  margin-top: 12px;
+}
+
+.utils-opacity-50 {
+  opacity: 0.5;
+}
+
+.utils-admonition-success {
+  color: rgb(0, 148, 0);
+}
+
+ /* .sidebar-title:not(:first-child) {
+  margin-top: 32px;
+ }
+  */
+  /* .sidebar-title:nth-of-type(2) {
+font-size: 0.9em;
+   } */
+
+
+   /* Hacks */
+
+  /* This style hides the "Home" link that would otherwise appear in the sidebar. 
+ In order to use the sidebar on the landing page, 
+ it was necessary to place the "/" slug in in home.mdx, 
+ which automatically adds it to the sidebar. */
+ .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item {
+  display: none;
+ }
+ 
