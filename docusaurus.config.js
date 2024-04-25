@@ -96,14 +96,23 @@ const config = {
          ],
       },
       footer: {
-        style: 'dark',
+        logo: {
+          alt: 'Cradl AI logo',
+          src: 'img/logo/cradl-docs-black.svg',
+          srcDark: 'img/logo/cradl-docs-white.svg',
+          href: '/',
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Cradl AI',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Cradl AI site',
+                href: 'https://cradl.ai',
+              },
+              {
+                label: 'Cradl AI app',
+                href: 'https://app.cradl.ai',
               },
             ],
           },
@@ -112,33 +121,41 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/CradlAI',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/Cradl_AI',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'GitHub',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'CLI',
+                href: 'https://github.com/lucidtechAI/las-cli',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Python SDK',
+                href: 'https://github.com/lucidtechAI/las-sdk-python',
+              },
+              {
+                label: 'JavaScript SDK',
+                href: 'https://github.com/lucidtechAI/las-sdk-js',
+              },
+              {
+                label: '.NET SDK',
+                href: 'https://github.com/lucidtechAI/las-sdk-net',
+              },
+              {
+                label: 'Java SDK',
+                href: 'https://github.com/lucidtechAI/las-sdk-java',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Lucidtech AS. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
