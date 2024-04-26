@@ -41,4 +41,4 @@ Make sure you do not:
  :::
 
 ## Invoking a `Trigger`
-Once you **send** the email with the file attachment, you will trigger your `flow` to automatically scan the document.
+Once you send the email with the file attachment, you will trigger your `flow` to automatically scan the document. You will find the result of your automated scans in in the `Validtion studio`.

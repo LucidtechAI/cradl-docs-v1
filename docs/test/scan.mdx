@@ -6,7 +6,6 @@ sidebar_position: 1
  You finally have a working `AI model`. In this section, we will: 
 
 - Test our `AI Model`
-- Understand wrong predictions
 
 After you clicked <span className="utils-admonition-success">**`Test model`**</span>, you should find yourself in the `Test studio`:
 
@@ -25,12 +24,11 @@ Let us inspect the output:
 </div>
 
 The model: 
-- predicted every 5/6 `fields` correctly except for `currency`
+- predicted every 5/6 `fields` correctly except for `currency`. 
 - predicted `total_amount` correctly, but the correct option was third likeliest prediction.
 - ISO formats dates automatically.
 
-## Dealing with wrong predictions
-The `AI Model` was 
+In the previous step, we saw how the AI Model had an `accuracy` value of only 18% in the `currency` field. This score is unlikely to improve unless we train on more data or review our annotation values.
 
 ## Go to Validation
 Now that we have tested our `AI Model` it is time to leave the `Test studio` and and upload some real documents in the `Validation studio`. Go back to your `Flows`overview (by clicking the Cradl AI logo in the top navigation) and click on `Go to validator`
