@@ -148,13 +148,14 @@ font-size: 0.9em;
    } */
 
 
-   /* Hacks */
+   /* Docusaurus Hacks */
 
-  /* This style hides the "Home" link that would otherwise appear in the sidebar. 
+  /* If a Home frontpage exists: 
+ This style hides the "Home" link that would otherwise appear in the sidebar. 
  In order to use the sidebar on the landing page, 
  it was necessary to place the "/" slug in in home.mdx, 
  which automatically adds it to the sidebar. */
- .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item {
-  display: none;
- }
+ /* .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item {
+  display: none; 
+ } */
  

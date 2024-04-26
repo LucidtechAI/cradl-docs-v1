@@ -18,14 +18,12 @@ While creating an `AI Model` and starting to scan documents is quick and easy, g
 
 In this section we will: 
 - Show you where to create a `New model`. 
-
 - Discuss whether you should start with a new model `from scratch` or choose a `template` model that is pre-trained on a specific document type (i.e receipts, invoices, contracts, etc.).
-
-- Discuss how flexible an `AI Model` is. For example, if your documents have a lot of variation, will one AI Model be able to scan the various documents correctly? Will extra measures be necessary?
-
 - Show you how to define the `fields` you want to extract from your own documents.
+{/* - Discuss how flexible an `AI Model` is. For example, if your documents have a lot of variation, will one AI Model be able to scan the various documents correctly? Will extra measures be necessary? */}
 
-## Create New model
+
+##  New model
 
 From your `Flows` overview, click on <span className="utils-admonition-success">**`New Model`**</span>. You will be taken to this screen:
 ![Image](../../static/img/create-model/create-model-modal.png)
@@ -34,58 +32,54 @@ There are three tasks we need to complete here:
 
 - Give the model a name.
 - Choosing whether to start with a model from scratch or use a template model.
-- Defining the fields we want to extract.
+- Knowing the fields we want to extract.
 
-### Give your model a name
-(Info about hwat model name is used for)
-![Image](../../static/img/create-model/create-model-name.png)
+## Give your model a name
+The name is only for your convenience. Examples of names can be "invoice model", "receipt model".
 
-### Create a model from scratch or use a template?
+## Create a model from scratch or use a template?
 ![Image](../../static/img/create-model/create-model-from-scratch.png)
-First off, any model created in Cradl AI, whether from scratch or from a template, utilises Cradl's state-of-the-art base model under the hood. When you create an `AI Model`, you are working on top of the base model Cradl AI has engineered to understand documents.
 
-So, whats the difference between starting from scratch or using a template?
+It is recommended to start with a **template** if you: 
+- find a template with `fields` that are similar to those you want to extract from your documents (i.e, a template might have a "total_amount" field, and so does your documents). 
+- want to test a model on your data quickly. Using a template will give better results out of the box.
+
+It is recommended to start **from scratch** if you:
+- have documents that are dissimilar from any of the templates.
+
+:::tip
+Any model created in Cradl AI, whether from scratch or from a template, utilises Cradl's state-of-the-art base model under the hood. When you create an `AI Model`, you are working on top of the base model Cradl AI has engineered to understand documents. Rest assured that, whether you create a model from scratch or start with a template, you have a solid model foundation in either case.
+:::
+
 <Tabs>
-  <TabItem value="apple" label="From scratch" default>
-    Pros:
-    - You tell 
-    - Me
-    - Man
+  <TabItem value="apple" label="From template" default>
 
-    Here is body text.
+  :::info
+  You can freely remove and add `fields` from templates according to your needs, but some `fields` have a `title` that is locked ![Image](../../static/img/icons/locked.svg). They cannot be changed because model has been pre-trained on the locked `title`. 
+  :::
 
-    Cons:
-    - Shit
-    - Is 
-    - Bad
+ Start with a template with `fields` that are similar to parts you want to extract from your documents. It is totally OK to add `fields` you need or to remove `fields` you do not need from a template.
+
+ ![Image](../../static/img/create-model/create-model-templateList.png)
   </TabItem>
-  <TabItem value="orange" label="From template">
+  <TabItem value="orange" label="From scratch">
+  When starting from scratch, you define and train every `field` yourself. It is the best option if your documents are dissimilar to any of the templates, but it takes more training data to get as good results as a template.
 
-  Pros:
-    - I dont
-    - know 
-    - man
-
-Here is an image
-  ![Image](https://img/docusaurus.png) 
-
-    Cons:
-    - Shit
-    - Is 
-    - Great
-
-Another image
-  ![Image](https://img/docusaurus.png) 
-
+    ![Image](../../static/img/create-model/create-model-fromScratch.png)
   </TabItem>
 </Tabs>
 <br/>
 
 
-## Defining fields to extract from your documents
+## Knowing the fields you want to extract from your documents
+Make a list of the data you want to extract from your documents. Your list of data should be informed by the data you want to export out of Cradle AI and into your other apps. It is recommended to only include **data that you need** when training your first model. You can introduce data that is **nice to have** once you are getting good results from your base model.
 
-### Data that is *nice to have* VS data that you *need*
+Here is an example of an invoice. Typical data you would want to extract from an invoice include: the recipent's full name, the recipient's address, invoice ID, total amount, VAT, currency,  
+<div style={{width: '50%', margin: '0 auto'}}>
+  ![Image](../../static/img/create-model/create-model-exampleDoc.jpg)
+</div>
 
+We will Create our `fields` according to the data we want to extract in the next section of this tutorial.
 {/* <BoxContainer>
   <Box border="none" padding="6px" background="none" width="400px">
     <HeaderText icon="/img/steps/01.svg" title="Build" text="Build and train high-accuracy document parsing models for any document." />

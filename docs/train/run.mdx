@@ -4,7 +4,38 @@ sidebar_position: 3
 
 # Run initial training
 
-Section will: 
-- Show Run your first training (easy). 
-- Discuss evaluating training results
-- Troubleshooting bad results
+In this section, we will: 
+- run your first training. 
+- review your training results
+- Troubleshoot poor training results
+
+
+## Run training
+- Click <span className="utils-admonition-success">**`Train model`**</span> to run the model's initial training. Training usually takes from 30 to 60 minutes.
+
+While your model is training, you can monitor the training progress by clicking <span className="utils-admonition-success">**`View training details`**</span> from your `Flow` overview:
+
+![Image](../../static/img/training/training-progress.png)
+
+No action is required from you here. Simply wait until the training is over.
+
+## Review training
+Once your training is complete, you can view the results of your training: 
+- Example of training gone **pretty well**: 
+
+![Image](../../static/img/training/training-results-better.png)
+
+- Example of training gone **poorly**:
+
+![Image](../../static/img/training/training-results-bad.png)
+
+## Troubleshooting poor training results
+
+There are two main reasons for why a training might go poorly:
+- The model simply needs more data to improve. 
+- There is a misunderstanding between the way you have annoted your documents and how the model behaves.
+
+## Go to Testing
+After reviewing your training results, click <span className="utils-admonition-success">**`Test model`**</span> from the training results screen: 
+
+![Image](../../static/img/training/training-goToTest.png)
