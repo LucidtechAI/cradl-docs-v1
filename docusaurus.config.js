@@ -63,22 +63,18 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+
       navbar: {
-        //title: 'Docs',
         logo: {
           alt: 'Cradl AI logo',
           src: 'img/logo/cradl-docs-black.svg',
           srcDark: 'img/logo/cradl-docs-white.svg',
           href: '/',
           target: '_self',
+        
         },
+            // hideOnScroll: true,
         items: [
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'mySidebar',
-          //   position: 'left',
-          //   label: 'CRADL Documentation',
-          // },
           // {
           // to: '/blog', 
           // label: 'Blog', 
@@ -91,6 +87,12 @@ const config = {
           // },
          ],
       },
+      docs: {
+        // sidebar: {
+        //   hideable: true,
+        // },
+      },
+    
       footer: {
         logo: {
           alt: 'Cradl AI logo',

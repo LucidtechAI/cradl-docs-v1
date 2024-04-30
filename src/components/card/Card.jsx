@@ -1,6 +1,6 @@
 export default ({header, title, description}) => (
       // <div className="flex flex-wrap -mx-2">
-          <div className="column flex w-full p-2 sm:w-1/2 lg:w-1/3  overflow-hidden">
+          <div className="column flex p-2 w-1/2  overflow-hidden">
               <div className="card w-full border overflow-hidden shadow rounded-xl">
                   <div className="relative bg-gray-700 h-32 w-full sm:h-auto" style={{paddingBottom: '50%' }}>
                       <img className="card__img top-0 h-full w-full object-cover absolute"  src="//source.unsplash.com/500x301/?nature" />
