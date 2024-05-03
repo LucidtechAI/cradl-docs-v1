@@ -11,78 +11,109 @@
 
  /* You can override the default Infima variables here. */
  :root {
-   --ifm-color-primary: #5f59f7;
-   --ifm-color-primary-dark: #4039f5;
-   --ifm-color-primary-darker: #3129f5;
-   --ifm-color-primary-darkest: #130be0;
-   --ifm-color-primary-light: #7e79f9;
-   --ifm-color-primary-lighter: #8d89f9;
-   --ifm-color-primary-lightest: #bcb9fc;
-   --ifm-code-font-size: 95%;
-   --ifm-heading-color: #3A3A3C;
-   --ifm-menu-color: #3A3A3C;
-   --ifm-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
-   'Segoe UI', Helvetica, Arial, sans-serif;
-   --doc-sidebar-width: 350px !important;
+  /* --base-background-color: #FCFCFD; */
+    --ifm-navbar-height: 4.2rem;
+    --ifm-heading-font-weight: 600;
+    --ifm-heading-color: #3A3A3C;
+    --ifm-font-color-base: #464c53;
+    --ifm-background-color: #FCFCFD;
+    --ifm-color-primary: #5f59f7;
+    --ifm-color-primary-dark: #4039f5;
+    --ifm-color-primary-darker: #3129f5;
+    --ifm-color-primary-darkest: #130be0;
+    --ifm-color-primary-light: #7e79f9;
+    --ifm-color-primary-lighter: #8d89f9;
+    --ifm-color-primary-lightest: #bcb9fc;
+    --ifm-code-font-size: 95%;
+    --ifm-menu-color: rgb(125, 125, 137);
+    --ifm-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+    'Segoe UI', Helvetica, Arial, sans-serif;
+    --color-gray-lighter: rgb(238, 240, 242);
+    --color-gray-light: rgb(231, 231, 231);
+   /* --doc-sidebar-width: 300px !important; */
+   /* --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(124,124,124,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>') */
  }
  
  html[data-theme='dark'] {
-   /* any other colors you wish to overwrite */
+   --ifm-font-color-base:  rgb(217, 220, 231);
    --ifm-menu-color: rgb(214, 215, 221);
    --ifm-heading-color: rgb(214, 215, 221);
+   --base-background-color: rgb(28, 30, 33); 
+   --ifm-menu-color: rgb(169, 169, 183);
+   --color-gray-lighter: rgba(238, 240, 242, 0.1);
+   --color-gray-light: rgba(231, 231, 231, 0.1);
  }
  
+ h1 { 
+  font-size: 2.7rem; 
+} 
+
+h2 { 
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em !important;
+}
+
+h3 { 
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
+ /* rgb(74, 74, 80) */
+
+
+
  .menu {
    margin: 5px;
  }
  
-
-
- .menu__list-item-collapsible > .menu__link {
-   font-size: 1em;
-   font-weight: 400;
- }
-
-
  .theme-doc-sidebar-menu {
    padding: 0 0 0 15px;
  }
- 
- /* .theme-doc-sidebar-item-category-level-1 > .menu__link {
-   font-weight: 600;
-   margin-top: 1em;
-   margin-bottom: 1em;
-   text-transform: uppercase;
-   color: #93939b;
- 
- }
- 
+
+ /* Sidebar level 1 items */
+ .theme-doc-sidebar-item-link,
+ .menu__list-item-collapsible > .menu__link {
+  margin-top: 5px;
+  font-weight: 600;
+  color: var(--ifm-menu-color)
+}
+.theme-doc-sidebar-item-link{
+  text-align: left;
+  color: var(--ifm-heading-color);
+}
+  /* html[data-theme='light'] .menu__list-item-collapsible > .menu__link  {
+    color: rgb(124, 124, 134)
+} */
+
+ /* Sidebar level 2 list container */
  .theme-doc-sidebar-item-category-level-1 > .menu__list {
    margin-bottom: 1em;
    margin-top: 0.5em;
-   margin-left: 0;
- } */
-
-
- 
- .theme-doc-markdown .markdown {
-  margin: 0 auto;
-  background-color: blue;
- }
-
+ } 
+ /* Sidebar level 2 list  item */
  .theme-doc-sidebar-item-link-level-2 .menu__link, .theme-doc-sidebar-item-category-level-2 .menu__link {
-   font-weight: 400;
-   font-size: 0.9rem;
+  /* font-size: 0.95em; */
+  font-weight: 400;
+  color: var(--ifm-menu-color)
  }
+
+ /* Scales down the arrow icon for collapsible sidebar items */
+ .menu__list-item--collapsed .menu__link--sublist:after,
+ .menu__list-item--collapsed .menu__caret:before {
+    transform: scale(0.7) rotate(90deg);
+ }
+ .menu__link--sublist-caret:after {
+  transform: scale(0.7) rotate(180deg);
+ }
+ /* *********** */
+
  
  .theme-doc-sidebar-item-link-level-2 .menu__link--active, .theme-doc-sidebar-item-category-level-2 .menu__link--active {
    color: var(--ifm-color-primary);
    background-color: transparent;
  }
  
- .theme-doc-sidebar-item-category-level-2 > .menu__list {
-   margin-left: 1em;
- }
  
  .navbar__search {
    margin-left: 0.5em;
@@ -103,27 +134,29 @@
    background-color: rgba(0, 0, 0, 0.3);
  }
  
- h1 { font-size: xxx-large; }
- h2 { font-size: x-large; }
- h3 { font-size: large; }
- 
- /* p {
-  font-size: 18px;
- } */
-
- /* Custom utilities used where tailwind doesnt compile (i.e inside sidebar.js) */
- /* .sidebar-title {
-  font-size: 1em;
+ .navbar-btn {
+  background-color: var(--ifm-color-primary);
+  color: white !important;
   font-weight: 600;
-  line-height: 1.2;
-} */
+ }
 
-.utils-mb-10 {
-  margin-bottom: 10px;
-}
+ .navbar-btn:hover {
+  background-color: #8d89f9;
+  border-color: var(--ifm-color-primary-light);
+ }
+
+ 
+/* some custom utils for where Tailwind doesnt compile for (such as sidebar) */
+
 
 .utils-font-sm {
+  font-size: 0.95em;
+}
+.utils-font-xs {
   font-size: 0.9em;
+}
+.utils-font-500 {
+  font-weight: 500;
 }
 
 .utils-lineHeight-normal {
@@ -133,11 +166,27 @@
 .utils-fontWeight-600 {
   font-weight: 600
 }
-
-.utils-mt-8 {
-  margin-top: 12px;
+.utils-fontWeight-700 {
+  font-weight: 700
 }
 
+.utils-mb-10 {
+  margin-bottom: 10px;
+}
+.utils-ml-10 {
+  margin-left: 10px;
+}
+
+.utils-mt-22 {
+  margin-top: 22px;
+}
+.utils-mr-8 {
+  margin-right: 8px;
+}
+
+.utils-opacity-lightest {
+  opacity: 0.85;
+}
 .utils-opacity-50 {
   opacity: 0.5;
 }
@@ -145,18 +194,108 @@
 .utils-admonition-success {
   color: rgb(0, 148, 0);
 }
+.utils-admonition-warning {
+ color: rgb(230, 167, 0)
+}
+.utils-active-link {
+  color: rgb(76, 179, 212)
+}
 
- /* .sidebar-title:not(:first-child) {
-  margin-top: 32px;
- }
-  */
-  /* .sidebar-title:nth-of-type(2) {
-font-size: 0.9em;
-   } */
+/* Sidebar icons for collapsible titles */
+.icon-code > div::before { 
+  background: url('/static/img/icons/code.svg');
+}
+.icon-cube > div::before { 
+  background: url('/static/img/icons/cube.svg');
+}
+.icon-usercheck > div::before { 
+  background: url('/static/img/icons/user-check.svg');
+}
+.icon-shield > div::before { 
+  background: url('/static/img/icons/shield.svg');
+}
+.icon-shield > div::before { 
+  background: url('/static/img/icons/shield.svg');
+}
+.icon-integrations > div::before { 
+  background: url('/static/img/icons/integrations.svg');
+}
+.icon-compliance > div::before { 
+  background: url('/static/img/icons/compliance.svg');
+}
+
+.icon-sidebar-collapsible > div::before {
+  content: '';
+  display: inline-block;
+  margin: auto -6px auto 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-compliance > div::before,
+.icon-integrations > div::before,
+.icon-shield > div::before,
+.icon-usercheck > div::before,
+.icon-cube > div::before,
+.icon-code > div::before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Sidebar icons for non-collapsible titles */
+.icon-zap > a::before { 
+  background: url('/static/img/icons/zap.svg');
+}
+.icon-billing > a::before { 
+  background: url('/static/img/icons/billing.svg');
+}
+.icon-changelog > a::before { 
+  background: url('/static/img/icons/changelog.svg');
+}
+
+.icon-sidebar-nocollapsible > a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+/* Icon */
+.icon-changelog > a::before,
+.icon-billing > a::before,
+.icon-zap > a::before {
+  margin: auto 6px auto -6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+
+/* Icons */
+/* html[data-theme='dark'] .sidebar-icon {
+  background-image: url('data:image/svg+xml,%3Csvg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21" stroke="rgb(214, 215, 221)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
+} */
+
+/* .sidebar-icon {
+  background-image: url('data:image/svg+xml,%3Csvg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21" stroke="rgb(58, 58, 60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
+  width: 20px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+.sidebar-icon a{
+  margin-left: 18px;
+} */
 
 
    /* Docusaurus Hacks */
-
   /* If a Home frontpage exists: 
  This style hides the "Home" link that would otherwise appear in the sidebar. 
  In order to use the sidebar on the landing page, 
@@ -165,4 +304,84 @@ font-size: 0.9em;
  /* .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item {
   display: none; 
  } */
- 
+
+ /* **************** Custom component classes *********** */
+ .section-highlight {
+  /* background-color: rgba(95, 89, 247, 0.07);
+  border-bottom: 2px solid rgba(95, 89, 247, 0.12);
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 2em; */
+}
+
+.image-backdrop {
+  position: relative;
+  /* background-color: rgb(238, 238, 238); */
+  background-color: var(--color-gray-lighter);
+  border-bottom: 3px solid var( --color-gray-light);
+  
+}
+
+.image-backdrop img {
+  padding: 0 30px 30px 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+.image-backdrop-caption {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+
+
+ /**************** Theme overrides *****************/
+ /* Hide TOC and breadcrumbs from frontpage */
+ .docs-doc-id-index .theme-doc-toc-desktop {
+  display: none;
+}
+.docs-doc-id-index .breadcrumbs {
+  display: none;
+}
+
+/* Style sidebar and navbar */
+html[data-theme='light'] .theme-doc-sidebar-container {
+background-color: white;
+border-right: 2px solid rgb(241, 240, 240);
+}
+.navbar__items {
+  margin-left: 10px;
+}
+
+/* ************* Theme Overrrides ************** */
+/* Override accordion */
+details {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+details.custom-accordion summary {
+  font-weight: 600;
+  color: rgb(76, 179, 212);
+  color: var(--ifm-color-primary)
+}
+
+
+/* @media screen and (min-width: 920px) {
+  .col {
+    margin-left: 25px;
+  }
+} */
+/* Makes indexpage fullwidth. Normally pages are 75% width bc of table of contents.  */
+/* .docs-doc-id-index .col {
+  max-width: 100% !important;
+  margin: 0 auto;
+} */
+/* .col {
+  max-width: 100% !important;
+  margin: 0 auto;
+} */

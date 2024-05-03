@@ -1,30 +1,49 @@
 ---
 slug: /
+pagination_next: null
+pagination_prev: null
 ---
-# Header goes here
+# Cradl AI documentation
+## CRADL AI Documentation
+
+import { Box, TextBox, BoxAction } from '@site/src/components/Box';
+import BoxContainer from '@site/src/components/BoxContainer';
+import HeaderText from '@site/src/components/HeaderText';
+import Testcomp from "../src/components/Testcomp";
 
 
-import Card from "../src/components/card/Card"
-import Container from "../src/components/card/Container"
-import Lead from "../src/components/Lead"
+<BoxContainer>
+  <Box border="none" padding="6px" background="none" width="400px">
+    <HeaderText icon="/img/steps/01.svg" title="Build" text="Build and train high-accuracy document parsing models for any document." />
+    <HeaderText icon="/img/steps/02.svg" title="Deploy" text="Deploy and integrate your model with developer-friendly REST APIs." />
+    <HeaderText icon="/img/steps/03.svg" title="Improve" text="Continuously improve your deployed model over time with seamless feedback loops." />
+  </Box>
+</BoxContainer>
+<Testcomp text="ewefdefefeffe"></Testcomp>
+{/* <div style={{maxWidth: '75%'}}>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div> */}
 
-![Image](../static/img/m.jpeg)
-## Header
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<BoxContainer>
+  <Box title="Quickstart" width="450px">
+    <p>
+        Get up and running quickly by using pre-trained models. You can later clone and customize them to fit your 
+        needs.
+    </p>
+    <BoxAction text="Parse invoices and receipts" href="../get-started/parse-invoices-and-receipts" />
+    <BoxAction text="Go to pre-trained models" href="https://app.cradl.ai/models" />
+  </Box>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-{/* <Lead text="Evverybody is the exception, which some convoluted way of doing things." />
+  <Box title="Build high accuracy parsers" width="450px">
+    <p>
+        Follow step-by-step instructions to create your first high accuracy document parser with Cradl.
+    </p>
+    <BoxAction text="Train a high accuracy model on large datasets" href="../get-started/train-high-accuracy-models-on-large-datasets" />
+  </Box>
 
-<Container>
-    <Card header="STEP-BY-STEP GUIDE" title="One or multiple AI models?" description="«My documents look very different. Will I need to pay for multiple models?»"/>
-    <Card header="STEP-BY-STEP GUIDE" title="A complete beginner's guide to ANNOTATING training data." description="Getting the most out of your model by mastering data annotation."/>
-    <Card header="Kategori" title="Overskrift" description="Ingress"/>
-</Container>
+</BoxContainer>
 
-<Container>
-    <Card header="CUSTOMER CASE" title="EQUINOR - Norway's largest energy company." description="How Equinor is automating data flows with CRADL."/>
-    <Card header="CUSTOMER CASE" title="DNB - Parsing ." description="How Scandinavia's largest bank is using CRADL for their customers."/>
-</Container> */}
+
 
 
 
