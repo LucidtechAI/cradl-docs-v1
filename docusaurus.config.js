@@ -36,7 +36,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          breadcrumbs: false,
+          breadcrumbs: true,
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
           // Please change this to your repo.
@@ -67,7 +67,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Cradl AI logo',
-          src: 'img/logo/cradl-docs-black.svg',
+          src: 'img/logo/docs-logo-black.svg',
           srcDark: 'img/logo/cradl-docs-white.svg',
           href: '/',
           target: '_self',
@@ -80,11 +80,12 @@ const config = {
           // label: 'Blog', 
           // position: 'left'
           // },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          {
+            href: 'https://app.cradl.ai/flows',
+            label: 'Open Cradl AI',
+            position: 'right',
+            className: 'button button--primary button--md navbar-btn utils-mr-8'
+          },
          ],
       },
       docs: {
