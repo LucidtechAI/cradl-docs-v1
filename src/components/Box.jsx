@@ -6,7 +6,9 @@ import { ArrowRight } from 'react-feather';
 
 
 export const Box = ({ title, text, icon, onClick, children, background, border, clickable, padding='12px', width='300px'}) => (
-  <div className={styles.box} style={{
+  <div 
+  className={styles.box}
+   style={{
       padding: padding,
       width: width,
       border: border,

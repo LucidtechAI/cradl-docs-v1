@@ -28,7 +28,7 @@
     --ifm-menu-color: rgb(125, 125, 137);
     --ifm-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
     'Segoe UI', Helvetica, Arial, sans-serif;
-    --color-gray-lighter: rgb(238, 240, 242);
+    --color-backdrop: rgb(238, 240, 242);
     --color-gray-light: rgb(231, 231, 231);
    /* --doc-sidebar-width: 300px !important; */
    /* --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(124,124,124,0.5)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>') */
@@ -40,7 +40,7 @@
    --ifm-heading-color: rgb(214, 215, 221);
    --base-background-color: rgb(28, 30, 33); 
    --ifm-menu-color: rgb(169, 169, 183);
-   --color-gray-lighter: rgba(238, 240, 242, 0.1);
+   --color-backdrop: rgba(238, 240, 242, 0.1);
    --color-gray-light: rgba(231, 231, 231, 0.1);
  }
  
@@ -57,7 +57,7 @@ h2 {
 h3 { 
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0 !important;
+  margin-bottom: 0.1em !important;
 }
  /* rgb(74, 74, 80) */
 
@@ -97,17 +97,6 @@ h3 {
   font-weight: 400;
   color: var(--ifm-menu-color)
  }
-
- /* Scales down the arrow icon for collapsible sidebar items */
- .menu__list-item--collapsed .menu__link--sublist:after,
- .menu__list-item--collapsed .menu__caret:before {
-    transform: scale(0.7) rotate(90deg);
- }
- .menu__link--sublist-caret:after {
-  transform: scale(0.7) rotate(180deg);
- }
- /* *********** */
-
  
  .theme-doc-sidebar-item-link-level-2 .menu__link--active, .theme-doc-sidebar-item-category-level-2 .menu__link--active {
    color: var(--ifm-color-primary);
@@ -146,8 +135,7 @@ h3 {
  }
 
  
-/* some custom utils for where Tailwind doesnt compile for (such as sidebar) */
-
+/* some custom utils for where Tailwind doesnt compile for (such as sideba or non-react HTML) */
 
 .utils-font-sm {
   font-size: 0.95em;
@@ -231,7 +219,6 @@ h3 {
   width: 20px;
   height: 20px;
 }
-
 .icon-compliance > div::before,
 .icon-integrations > div::before,
 .icon-shield > div::before,
@@ -261,7 +248,6 @@ h3 {
   width: 20px;
   height: 20px;
 }
-/* Icon */
 .icon-changelog > a::before,
 .icon-billing > a::before,
 .icon-zap > a::before {
@@ -272,54 +258,22 @@ h3 {
 }
 
 
-
-
-
-/* Icons */
-/* html[data-theme='dark'] .sidebar-icon {
-  background-image: url('data:image/svg+xml,%3Csvg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21" stroke="rgb(214, 215, 221)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
-} */
-
-/* .sidebar-icon {
-  background-image: url('data:image/svg+xml,%3Csvg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M17 17L22 12L17 7M7 7L2 12L7 17M14 3L10 21" stroke="rgb(58, 58, 60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
-  width: 20px;
-  background-repeat: no-repeat;
-  height: 20px;
-  width: 100%;
-  display: flex;
-  align-self: center;
-  align-items: center;
-}
-.sidebar-icon a{
-  margin-left: 18px;
-} */
-
-
-   /* Docusaurus Hacks */
-  /* If a Home frontpage exists: 
- This style hides the "Home" link that would otherwise appear in the sidebar. 
- In order to use the sidebar on the landing page, 
- it was necessary to place the "/" slug in in home.mdx, 
- which automatically adds it to the sidebar. */
- /* .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1.menu__list-item {
-  display: none; 
- } */
+ /* Scales down the arrow icon for collapsible sidebar items */
+ .menu__list-item--collapsed .menu__link--sublist:after,
+ .menu__list-item--collapsed .menu__caret:before {
+    transform: scale(0.7) rotate(90deg);
+ }
+ .menu__link--sublist-caret:after {
+  transform: scale(0.7) rotate(180deg);
+ }
 
  /* **************** Custom component classes *********** */
- .section-highlight {
-  /* background-color: rgba(95, 89, 247, 0.07);
-  border-bottom: 2px solid rgba(95, 89, 247, 0.12);
-  border-radius: 10px;
-  padding: 25px;
-  margin-top: 2em; */
-}
 
 .image-backdrop {
   position: relative;
-  /* background-color: rgb(238, 238, 238); */
-  background-color: var(--color-gray-lighter);
+  /* background-color: var(--color-backdrop); */
+  background-color: var(--color-backdrop);
   border-bottom: 3px solid var( --color-gray-light);
-  
 }
 
 .image-backdrop img {
@@ -345,6 +299,14 @@ h3 {
 }
 .docs-doc-id-index .breadcrumbs {
   display: none;
+}
+.docs-doc-id-index h1 {
+  margin-bottom: 0 !important;
+}
+.docs-doc-id-index h2 {
+  margin-top: 0 !important;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 
 /* Style sidebar and navbar */

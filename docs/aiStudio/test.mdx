@@ -22,10 +22,9 @@ Click <span className="utils-admonition-success">**`Run model`**</span>, and you
 
 <details className='custom-accordion'>
   <summary>Inspect extracted data</summary>
-<p>The model:</p>
+<p>Based on 15 training documents, the model:</p>
 <ul> 
-<li> predicted every 5/6 `fields` correctly except for `currency`. </li>
-<li> predicted `total_amount` correctly, but the correct option was third likeliest prediction. </li>
+<li> Predicted 5/5 fields correctly. However, the correct value for `total_amount` is not the first, but the second likeliest prediction. This indicates that more training data is necessary. </li>
 <li> ISO formats dates automatically. </li>
 </ul>
  <div style={{maxWidth: "50%", margin: "0 auto"}}>

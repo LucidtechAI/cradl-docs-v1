@@ -1,29 +1,29 @@
-# Connecting to `Triggers`
-Welcome to the last section of this tutorial. In this section, we will:
-- Import a document through a Trigger rather than through manual upload.
-- Automatically scan the imported document.
-- Validate the scanned document
-- Export the scanned document. 
-
-In this tutorial, we will be using an `email` as our `Trigger`, as it is the easiest to set up and test. You can find guides to the other triggers under our integrations guides. 
+# Connect to `Trigger`
+We will be using an `email` as our `Trigger`. You can find guides to the other triggers under our integrations guides, such as REST API, Blue Prism, uiPath and Zapier. 
 
 ## Adding `email` trigger
 From your `Flow` overview, click <span className="utils-admonition-success">**`+ Add trigger`**</span>:
 
+<div class="image-backdrop utils-mb-10">
+<p class="image-backdrop-caption text-sm"></p>
 ![Image](../../static/img/triggers/triggers-selectTrigger.png)
-
+</div>
 - Choose <span className="utils-admonition-success">**`Email`**</span>
 
 You might be asked to `save` your `Flow`; 
-
+<div class="image-backdrop utils-mb-10">
+<p class="image-backdrop-caption text-sm"></p>
 ![Image](../../static/img/triggers/triggers-saveFlow.png)
+</div>
 
 In which case you simply <span className="utils-admonition-success">**`Save`**</span> your flow from the top navigation bar.
 
 After saving, you should see a code. This code is a Cradl email address that will automatically scan the documents it recieves. You will forward your documents to this address from your email provider in order to trigger an automatic scan of the document in Cradl.
 
+<div class="image-backdrop utils-mb-10">
+<p class="image-backdrop-caption text-sm"></p>
 ![Image](../../static/img/triggers/triggers-emailCode.png)
-
+</div>
 
 In order to try this out: 
  - **Log in** to your email provider.
@@ -40,5 +40,5 @@ Make sure you do not:
     - Do not add more than one attached file per email. 
  :::
 
-## Invoking a `Trigger`
+## Invoking `email` trigger
 Once you send the email with the file attachment, you will trigger your `flow` to automatically scan the document. You will find the result of your automated scans in in the `Validtion studio`.
